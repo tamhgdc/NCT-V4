@@ -1,0 +1,48 @@
+
+
+.video-detail {
+
+        &__info {
+            margin-left: 1rem;
+            margin-bottom: 12rem;
+
+            .title {
+                font-size: 1.4rem;
+                color: $txt-grey;
+                font-weight: 500;
+                margin-bottom: .2rem;
+                margin-top: .5rem;
+                width: 100%;
+
+                span {
+                    font-weight: 600;
+                    width: 100%;
+                }
+            }
+
+            .art {
+                font-size: 1rem;
+                color: $txt-grey;
+                margin-top: 1rem;
+                font-weight: 500;
+                margin-bottom: 1rem;
+            }
+        }
+
+    &__video {
+        margin-top: 1rem;
+        width: 100%;
+        height: 400px;
+        background-color: $txt-black;
+        border-radius: 4px;
+
+        @include mobile{
+            height: 270px;
+        }
+
+        video {
+            width: 100%;
+            height: 100%;
+        }
+    }
+}

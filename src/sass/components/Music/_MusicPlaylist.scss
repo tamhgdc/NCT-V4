@@ -1,0 +1,85 @@
+
+.music-playlist {
+    position: relative;
+
+    @include tablet {
+        margin-top: 3rem;
+        padding: 0 5px;
+    }
+
+    &__close {
+        position: absolute;
+        top: -1rem;
+        right: 1rem;
+        font-size: 1.6rem;
+        color: $txt-black;
+        cursor: pointer;
+
+        &:hover {
+            color: $txt-hover;
+        }
+    }
+
+    &__cur-song {
+        width: 100%;
+        margin-top: 1rem;
+
+        &__title {
+            font-size: 1rem;
+            color: $txt-grey;
+            margin-bottom: .5rem;
+            font-weight: 500;
+        }
+
+        &__item {
+            @include flex(flex-start, center);
+            margin-bottom: .5rem;
+            cursor: pointer;
+
+            img {
+                width: 20%;   
+                border-radius: 4px; 
+                margin-right: .5rem;
+            }
+
+            &__info {
+                width: 80%;
+
+                .name {
+                    text-overflow: ellipsis;
+                    overflow: hidden !important; 
+                    white-space: nowrap;
+                    font-size: 1rem;
+                    font-weight: 500;
+                    color: $txt-grey;
+                }
+
+                .art {
+                  span {
+                    font-size: .8rem;
+                    text-overflow: ellipsis;
+                    overflow: hidden !important; 
+                    white-space: nowrap;
+                    font-weight: 500;
+                    color: $txt-grey;
+                    
+                    &:hover {
+                        color: $txt-hover;
+                    }
+                  }
+                }
+            }
+        }
+    }
+
+    &__list {
+        margin-top: 1rem;
+
+        &__title {
+            font-size: 1rem;
+            color: $txt-grey;
+            margin-bottom: .5rem;
+            font-weight: 500;
+        }
+    }
+}

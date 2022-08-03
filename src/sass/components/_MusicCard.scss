@@ -1,0 +1,147 @@
+
+
+.music-card {
+    cursor: pointer;
+    position: relative;
+    width: 100%;
+
+    &__img {
+        position: relative;
+        width: 100%;
+        height: 200px;
+
+        &.small-img-wrap {
+            height: auto;
+        }
+
+        @include tablet {
+            height: 180px;
+        }
+
+        @include mobile {
+            height: 160px;
+        }
+
+        &__img {
+            width: 100%;
+            border-radius: 15px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 100%;
+            box-shadow: 0 0.4rem 0.8rem rgb(0 0 0 / 20%);
+        }
+
+        .img-small {
+            height: 80px;
+        }
+
+        &__play {
+            position: absolute;
+            width: 100%;
+            inset: 0;
+            transition: transform .3s ease;
+            background-color: rgba($color: $black, $alpha: .4);
+            visibility: hidden;
+            opacity: 0;
+            height: 100%;
+            transition:  visibility .3s ease, opacity .3s ease;
+            border-radius: 15px;
+
+            &.play-small {
+                height: 80px;
+            }
+
+
+            &__option {
+                visibility: hidden;
+                opacity: 0;
+            }
+
+            & > i {
+                visibility: hidden;
+                opacity: 0;
+            }
+        }
+
+
+
+        &:hover  {
+
+            .music-card__img {
+
+                &__play {
+                   
+                    visibility: visible;
+                    opacity: 1;
+                    border-radius: 15px;
+        
+                    & > i {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%,-50%);
+                        font-size: 3.2rem;
+                        color: $txt-white;
+                        visibility: visible;
+                        opacity: 1;
+                    }
+
+                    .small {
+                        font-size: 2rem;
+                    }
+
+                    &__option {
+                        position: absolute;
+                        display: none;
+                        top: 10%;
+                        right: .4rem;
+                        visibility: visible;
+                        opacity: 1;
+                        
+                       & >  i {
+                            font-size: 2rem;
+                            color: $txt-white;
+                        }
+                    }
+                }
+            }
+         
+        }
+
+     
+
+    }
+
+    &__name {
+        width: 100%;
+        font-size: 1rem;
+        display: inline-block;
+        font-weight: 500;
+        text-overflow: ellipsis;
+        overflow: hidden !important; 
+        white-space: nowrap;
+        color: $txt-grey;
+        margin-top: .5rem;
+
+        &:hover {
+            color: $txt-hover;
+        }
+    }
+
+    &__copy {
+        display: none;
+
+        &.active {
+            display: block;
+            position: absolute;
+            top: 1rem;
+            right: -7.5rem;
+            z-index: 99;
+            padding: .5rem .7rem .5rem .5rem;
+            background-color: $black;
+            color: $txt-white;
+            border-radius: 10px;
+        }
+    }
+}

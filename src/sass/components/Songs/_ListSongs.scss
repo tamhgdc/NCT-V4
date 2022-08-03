@@ -1,0 +1,47 @@
+
+.list-songs {
+    margin-top: 4rem;
+
+    .row {
+        @include flex(center, center);
+        gap: 1rem;
+        flex-wrap: wrap;
+
+        .col-4 {
+            width: calc(25% - 1rem);
+
+            @include mobile {
+                width: calc(50% - 1rem);
+            }
+        }
+
+        .notice {
+            font-size: 3rem;
+            color: $txt-black;
+            text-align: center;
+            margin: 10rem 0;
+        }
+    }
+
+    .pagination {
+        margin-top: 2rem;
+        @include flex(center, center);
+        gap: .5rem;
+
+        &__item {
+            cursor: pointer;
+            display: inline-block;
+            padding: .3rem .5rem;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 1px solid $txt-grey;
+            color: $txt-black;
+
+            &.active {
+                background-color: $txt-hover;
+                color: $txt-white;
+                border: 1px solid $txt-hover;
+            }
+        }
+    }
+}

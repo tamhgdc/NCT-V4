@@ -1,0 +1,42 @@
+
+
+.home__slide {
+    width: 100%;
+    @include flex(center, center);
+    &__item {
+        width: 100%;
+    }
+}
+
+.swiper-button-prev {
+    font-size: 2rem;
+    color: $txt-white;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    background-color: rgba($color: $black, $alpha: .5);
+
+    @include mobile {
+        font-size: .2rem;
+        padding: 1.5rem 1rem;
+        background-color: rgba($color: $black, $alpha: .1);
+    }
+}
+
+.swiper-button-next {
+    font-size: 2rem;
+    color: $txt-white;
+    padding: 3rem 2rem;
+    border-radius: 10px;
+    background-color: rgba($color: $black, $alpha: .5);
+
+    @include mobile {
+        font-size: .2rem;
+        padding: 1.5rem 1rem;
+        background-color: rgba($color: $black, $alpha: .1);
+    }
+}
+
+.swiper {
+    width: 100%;
+    border-radius: 10px;
+}

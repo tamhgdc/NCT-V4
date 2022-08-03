@@ -1,0 +1,18 @@
+
+
+.videos {
+
+    .row {
+        @include flex(center, center);
+        flex-wrap: wrap;
+        gap: 1.5rem;
+
+        .col-3 {
+            width: calc(33% - 1.5rem);
+
+            @include mobile {
+                width: calc(50% - 1.5rem);
+            }
+        }
+    }
+}

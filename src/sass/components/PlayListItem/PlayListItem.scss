@@ -1,0 +1,136 @@
+
+.playlist-item {
+    margin-top: 2rem;
+    &__info {
+        @include flex(center, flex-start);
+
+        @include mobile {
+            flex-wrap: wrap;
+        }
+        &__img {
+            width: 30%;
+            box-shadow: 0 8px 16px rgb(0 0 0 / 20%);
+            height: 14rem;
+            border-radius: 10px;
+
+            @include mobile {
+                width: 100%;
+            }
+
+            &__img {
+                background-position: center;
+                background-repeat: no-repeat;
+                border-radius: 10px;
+                background-size: cover;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &__info {
+            width: 70%;
+            margin-left: 2rem;
+
+            @include mobile {
+                width: 100%;
+                margin-left: 1rem;
+                margin-top: 1rem;
+            }
+
+            .title {
+                color: $txt-grey;
+                font-size: 1rem;
+                font-weight: 500;
+                margin-bottom: .5rem;
+
+                span {
+                    font-weight: 600;
+                }
+            }
+
+            .date {
+                color: $txt-grey;
+                font-size: 1rem;
+                font-weight: 500;
+                margin-bottom: 1.5rem;
+            }
+
+            .tags {
+                @include flex(flex-start, center);
+                flex-wrap: wrap;
+                gap: 10px;
+
+                &__title {
+                    color: $txt-grey;
+                    font-size: 1rem;
+                    font-weight: 500;
+                }
+                &__item {
+                    padding: .3rem .7rem;
+                    background-color: rgba($color: $txt-grey, $alpha: .2);
+                    border-radius: 6px;
+                    color: $txt-grey;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $txt-hover;
+                    }
+                }
+            }
+        }
+    }
+
+    &__songs {
+
+        &__title {
+            margin: 2rem 0 1rem;
+        }
+
+        &__list {
+            
+            &__item {
+                @include flex(flex-start, center);
+                background-color: rgba($color: $txt-grey, $alpha: .2);
+                padding: .8rem .7rem;
+                border-radius: 4px;
+                margin: .2rem;
+
+                &:hover {
+                    background-color: rgba($color: $txt-grey, $alpha: .3);
+                    cursor: pointer;
+                }
+
+                &:nth-child(1):hover {
+                    background-color: rgba($color: $txt-grey, $alpha: .2);
+                    cursor: default;
+                }
+
+                .head {
+                    text-transform: uppercase;
+                    font-weight: 500;
+                    color: $txt-black;
+                }
+
+                .title {
+                    width: 40%;
+                    text-overflow: ellipsis;
+                    overflow: hidden !important; 
+                    white-space: nowrap;
+                }
+
+                .art {
+                    margin-left: 1rem;
+                    width: 40%;
+                    text-overflow: ellipsis;
+                    overflow: hidden !important; 
+                    white-space: nowrap;
+                }
+
+                .time {
+                    width: 20%;
+                    text-align: center;
+                }
+            }
+        }
+    }
+}

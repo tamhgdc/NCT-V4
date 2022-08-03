@@ -1,0 +1,14 @@
+
+.topic-event-list {
+    .swiper-slide {
+        width: 23%;
+
+        @include tablet{
+            width: 35%;
+        }
+
+        @include mobile {
+            width: 50%;
+        }
+    }
+}

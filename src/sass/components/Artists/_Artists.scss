@@ -1,0 +1,42 @@
+
+
+.artists {
+
+    &__list {
+        @include flex(center, center);
+        gap: 1.5rem;
+        flex-wrap: wrap;
+        
+        .col-4 {
+            width: calc(25% - 1.5rem);
+
+            @include mobile {
+                width: calc(33% - 1.5rem);
+            }
+        }
+    }
+}
+
+.pagination {
+    @include flex(center, center);
+    margin-top: 1.5rem;
+    gap: 10px;
+
+    &__item {
+        padding: .3rem .8rem;
+        background-color: rgba($color: $txt-grey, $alpha: .2);
+        color: $txt-grey;
+        border-radius: 50%;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba($color: $txt-hover, $alpha: .8);
+            color: $txt-white;
+        }
+
+        &.active {
+            background-color: rgba($color: $txt-hover, $alpha: .8);
+            color: $txt-white;
+        }
+    }
+}

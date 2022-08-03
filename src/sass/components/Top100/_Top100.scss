@@ -1,0 +1,137 @@
+
+.top-100-detail {
+    margin-top: 2rem;
+    width: 100%;
+
+    &__header {
+        width: 100%;
+        @include flex(center, flex-start);
+
+        &__img {
+            width: 30%;
+            box-shadow: 0 8px 16px rgb(0 0 0 / 20%);
+            border-radius: 6px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 220px;
+
+            @include mobile {
+                width: 50%;
+                height: 150px;
+            }
+        }
+
+        &__info {
+            width: 70%;
+            margin-left: 2rem;
+
+            @include mobile {
+                width: 50%;
+            }
+
+            &__title {
+                font-size: 2.2rem;
+                font-weight: 600;
+                color: $txt-black;
+                margin-bottom: 1rem;
+
+                @include mobile {
+                    font-size: 1.8rem;
+                }
+            }
+
+            &__desc {
+                font-size: 1.1rem;
+                font-weight: 500;
+                color: $txt-grey;
+                margin-top: 1rem;
+
+                span {
+                    font-weight: 600;
+                    font-size: 1.6rem;
+
+                    @include mobile {
+                        font-size: 1.2rem;
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+
+    &__songs {
+        &__title {
+            margin-top: 2rem;
+            color: $txt-grey;
+            font-size: 1.4rem;
+        }
+
+        &__list {
+            margin-top: 1rem;
+        }
+
+        &__item {
+            @include flex(flex-start, center);
+            margin-bottom: .2rem;
+            cursor: pointer;
+            
+            
+            &__stt {
+                padding: .3rem .7rem;
+                background-color: rgba($color: $txt-grey, $alpha: .1);
+                border-radius: 50%;
+                color: $txt-grey;
+            }
+
+            &__content {
+                @include flex(flex-start, center);
+                margin-left: 2rem;
+                background-color: rgba($color: $txt-grey, $alpha: .1);
+                width: 100%;
+                border-radius: 6px;
+                overflow: hidden;
+                padding: .2rem 0;
+
+                @include mobile {
+                    margin-left: .8rem;
+                }
+
+                &:hover {
+                    background-color: rgba($color: $txt-grey, $alpha: .2);
+                }
+
+                .img {
+                    width: 4rem;
+                    padding: .5rem;
+                    // width: 15%;
+                }
+
+                .info {
+                    margin-left: 1rem;
+                    width: 85%;
+
+                    @include mobile {
+                        margin-left: .5rem;
+                    }
+
+                    &__title {
+                        font-size: 1rem;
+                        color: $txt-grey;
+                        font-weight: 600;
+                        text-overflow: ellipsis;
+                        overflow: hidden !important; 
+                        white-space: nowrap;
+                        width: 100%;
+                    }
+
+                    &__art {
+                        font-size: .8rem;
+                        color: $txt-grey;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+}

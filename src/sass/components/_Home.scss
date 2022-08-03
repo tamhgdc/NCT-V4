@@ -1,0 +1,51 @@
+
+.home {
+
+    &__list {
+        margin: 0 1rem;
+        margin-bottom: 1rem;
+        
+        &__title {
+            margin: 1.5rem 0 1rem;
+        }
+    }
+
+    &__release {
+        margin: 0 1rem;
+        a {
+            
+        }
+
+    }
+
+    &__chart {
+        padding: 0 1rem;
+
+        &__list {
+            @include flex(center,center);
+            gap: 15px;
+            flex-wrap: wrap;
+
+            &__item {
+                width: 30%;
+
+                @include mobile {
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    &__hot-video {
+        margin: 0 1rem;
+    }
+}
+
+.home__title {
+    margin: 1rem 0 1rem;
+    display: inline-block;
+
+    &:hover {
+        color: $txt-hover;
+    }
+}

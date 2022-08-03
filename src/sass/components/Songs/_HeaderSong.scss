@@ -1,0 +1,69 @@
+
+
+.header-song {
+    border-bottom: 1px solid rgba($color: $txt-black, $alpha: .2);
+
+    @include mobile {
+        padding-bottom: .5rem;
+    }
+
+    &__menu {
+        @include flex(space-between, center);
+        margin: 1rem 4rem .5rem;
+        flex-wrap: wrap;
+
+        @include mobile {
+            margin: 0;
+            justify-content: center;
+        }
+
+        &__item {
+
+            @include mobile {
+                text-align: center;
+                margin-top: 1rem;
+            }
+
+            a {
+                font-size: 1.4rem;
+                padding: 0 1rem;
+                position: relative;
+                display: block;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: -.5rem;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: $txt-hover;
+                }
+
+                &:hover::before {
+                    width: 100%;
+                    transition: width .2s linear 0s;
+                }
+            }
+
+            &.active {
+                a {
+                    font-size: 1.4rem;
+                    padding: 0 1rem;
+                    position: relative;
+                    display: block;
+    
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: -.5rem;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: $txt-hover;
+                    }
+                }
+            }
+        }
+    }
+}

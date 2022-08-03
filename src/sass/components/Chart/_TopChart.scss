@@ -1,0 +1,162 @@
+
+.top-chart {
+    margin-top: 2rem;
+
+    &__time {
+        font-size: 1.2rem;
+        color: $txt-black;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+
+        @include flex (flex-start, center);
+
+        .minus,
+        .plus {
+            font-size: 1.6rem;
+            color: $txt-grey;
+            cursor: pointer;
+
+            &:hover {
+                color: $txt-black;
+            }
+        }
+
+        .minus {
+            margin-right: .5rem;
+        }
+
+        .plus {
+            margin-left: .5rem
+        }
+    }
+
+    &__main {
+        @include flex(center, center);
+
+        &__img {
+            width: 25%;
+            position: relative;
+
+            img {
+                border-radius: 6px;
+                box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
+            }
+
+            span {
+                position: absolute;
+                top: -5px;
+                left: 0;
+                padding: .3rem .7rem;
+                background-color: #f44336;
+                font-size: 1rem;
+                color: $txt-white;
+                font-weight: 500;
+                border-radius: 6px;
+            }
+        }
+
+        &__info {
+            width: 75%;
+            padding-left: 2rem;
+
+            &__name {
+                font-size: 1rem;
+                color: $txt-grey;
+                font-weight: 500;
+
+                span {
+                    font-weight: 600;
+                }
+            }
+
+            &__art {
+                @include flex(flex-start, center);
+                padding-left: 1rem;
+                margin-top: .5rem;
+                padding-bottom: 2rem;
+                border-bottom: 1px solid rgba($color: $txt-black, $alpha: .2);
+
+                &__img {
+                    width: 2rem;
+                    height: 2rem;
+                    @include flex(center, center);
+
+                    img {
+                        border-radius: 50%;
+                    }
+                }
+
+                &__name {
+                    margin-left: 1.5rem;
+
+                    span {
+                        font-size: 1rem;
+                        color: $txt-grey;
+
+                        &:hover {
+                            color: $txt-hover;
+                        }
+                    }
+                }
+            }
+
+            &__chart {
+                @include flex(space-between, center);
+                margin-top: 2rem;
+
+                &__last-week {
+
+                    span{
+                        color: #FFC40E;
+                        font-size: 1.4rem;
+                        font-weight: 700;
+                    }
+                    
+                    p {
+                        font-size: 1.2rem;
+                        color: $txt-grey;
+
+                        @include mobile {
+                            font-size: .8rem;
+                        }
+                    }
+                }
+
+                &__top {
+
+                    span{
+                        color: #2DAAED;
+                        font-size: 1.4rem;
+                        font-weight: 700;
+                    }
+                    p {
+                        font-size: 1.2rem;
+                        color: $txt-grey;
+
+                        @include mobile {
+                            font-size: .8rem;
+                        }
+                    }
+                }
+
+                &__total {
+
+                    span{
+                        color: #95D96D;
+                        font-size: 1.4rem;
+                        font-weight: 700;
+                    }
+
+                    p {
+                        font-size: 1.2rem;
+                        color: $txt-grey;
+
+                        @include mobile {
+                            font-size: .8rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

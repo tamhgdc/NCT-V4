@@ -1,0 +1,120 @@
+
+
+.footer {
+    margin-top: 5rem;
+    @include mobile {
+        text-align: center;
+    }
+    
+    &__top {
+        @include flex(space-between, flex-start);
+
+        &__left {
+            width: 50%;
+
+            &__menu {
+                li {
+                    margin-bottom: .5rem;
+                    a{
+                        font-size: 1.2rem;
+                        color: $txt-black;
+                        font-weight: 500;
+
+                        &:hover {
+                            color: $txt-hover;
+                        }
+                    }
+                }
+            }
+        }
+
+        &__right {
+            width: 50%;
+
+            &__social {
+                text-align: center;
+                
+                .face {
+                    font-size: 3rem;
+
+                    &:hover {
+                        color: $txt-hover;
+                    }
+                }
+
+                .insta {
+                    font-size: 3rem;
+
+                    &:hover {
+                        color: $txt-orange;
+                    }
+                }
+            }
+
+            &__download {
+                margin-top: 1rem;
+                text-align: center;
+                
+                img {
+                    width: 10rem;
+                    margin-right: .3rem;
+                }
+            }
+        }
+    }
+    
+    &__mid {
+        @include flex(space-between, center);
+        margin-top: 2rem;
+        flex-wrap: wrap;
+
+        &__author {
+            @include flex(center, center);
+
+            &__img {
+                margin-right: 1rem;
+            }
+
+            &__info {
+                p {
+                    color: $txt-grey;
+                    margin-top: .5rem;
+
+                    span {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+
+        &__confirm {
+            @include flex(center,center);
+
+            @include mobile {
+                margin-top: 1rem;
+            }
+
+            img {
+                margin-right: 1rem;
+            }
+        }
+    }
+
+    &__down {
+        margin-top: 1rem;
+        p {
+            color: $txt-grey;
+            font-weight: 400;
+            margin-top: .5rem;
+        }
+
+        &__contact {
+            margin-bottom: 3rem;
+
+            &__title {
+                color: $txt-grey;
+                margin-top: .5rem;
+            }
+        }
+    }
+}

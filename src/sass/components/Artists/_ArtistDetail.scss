@@ -1,0 +1,142 @@
+
+.artist-detail {
+    padding: 1rem;
+
+    &__bg {
+        position: relative;
+        width: 100%;
+
+        &__img {
+            border-radius: 4px;
+        }
+
+        &__name {
+            position: absolute;
+            bottom: 1rem;
+            left: 1rem;
+            padding: 0 1rem 0 0;
+            @include flex(center, center);
+            border-radius: 25px;
+            background-color: $txt-black;
+
+            @include mobile {
+                bottom: .5rem;
+                left: .5rem;
+            }
+
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                border: 1px solid $txt-black;
+
+                @include mobile {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+
+            p {
+                font-size: 1rem;
+                width: fit-content;
+                padding: 0 .2rem;
+                color: $txt-white;
+
+                @include mobile {
+                    font-size: .8rem;
+                }
+            }
+
+        }
+    }
+
+    &__title {
+        font-size: 1.5rem;
+        font-weight: 600;
+        margin: 2rem 0 1rem;
+        color: $txt-grey;
+    }
+
+    &__nearly {
+
+        &__list {
+            @include flex(flex-start, center);
+            gap: 1rem;
+            margin-right: -1rem;
+            flex-wrap: wrap;
+
+            &__item {
+                width: calc(25% - 1rem);
+
+                @include mobile {
+                    width: calc(50% - 1rem);
+                }
+            }
+        }
+    }
+
+    &__songs {
+        &__list {
+            @include flex(flex-start, center);
+            gap: 1rem;
+            margin-right: -1rem;
+            flex-wrap: wrap;
+
+            &__item {
+                width: calc(25% - 1rem);
+                
+                @include mobile {
+                    width: calc(50% - 1rem);
+                }
+            }
+        }
+    }
+
+    &__playlist {
+        &__list {
+            @include flex(flex-start, center);
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-right: -1rem;
+
+            &__item {
+                width: calc(25% - 1rem);
+                
+                @include mobile {
+                    width: calc(50% - 1rem);
+                }
+            }
+        }
+    }
+
+    &__videos {
+        &__list {
+            @include flex(flex-start, center);
+            gap: 1rem;
+            flex-wrap: wrap;
+            margin-right: -1rem;
+
+
+            &__item {
+                width: calc(50% - 1rem);
+
+                .video-hot__small__item {
+
+                    &__img {
+                        cursor: pointer;
+                        width: 100%;
+                        overflow: hidden;
+                        height: fit-content;
+                        border-radius: 4px;
+                        position: relative;
+                        box-shadow: 0 4px 8px rgb(0 0 0 / 20%);
+
+                        .time {
+                            bottom: 0;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

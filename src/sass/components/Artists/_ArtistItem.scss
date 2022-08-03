@@ -1,0 +1,17 @@
+
+.artist-item {
+    width: 100%;
+    img {
+        border-radius: 50%;
+    }
+    p {
+        text-align: center;
+        font-size: 1.1rem;
+        color: $txt-grey;
+        width: 100%;
+
+        &:hover {
+            color: $txt-hover;
+        }
+    }
+}

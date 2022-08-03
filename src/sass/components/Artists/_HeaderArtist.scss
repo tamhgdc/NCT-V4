@@ -1,0 +1,88 @@
+
+
+
+.header-artist {
+    margin: 1rem 0 2rem;
+
+    &__main {
+        @include flex(center, center);
+        gap: 2rem;
+        @include mobile {
+            gap: 1rem;
+        }
+        flex-wrap: wrap;
+        border-bottom: 1px solid rgba($color: $txt-black, $alpha: .2);
+
+        &__item {
+            padding-bottom: .5rem;
+
+            a {
+                font-size: 1.4rem;
+                position: relative;
+                padding: 0 1rem;
+                display: block;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: -.5rem;
+                    left: 0;
+                    width: 0;
+                    height: 2px;
+                    background-color: $txt-hover;
+                }
+
+                &:hover::before {
+                    width: 100%;
+                    transition: width .2s linear 0s;
+                }
+            }
+
+            &.active {
+                a {
+                    font-size: 1.4rem;
+                    padding: 0 1rem;
+                    position: relative;
+                    display: block;
+    
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        bottom: -.5rem;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background-color: $txt-hover;
+                    }
+                }
+            }
+        }
+    }
+
+    &__sub {
+        margin-top: 1rem;
+        
+        &__menu {
+            @include flex(center, center);
+            flex-wrap: wrap;
+            gap: 2rem;
+
+            &__item {
+                a {
+                    color: $txt-grey;
+                    font-size: 1rem;
+
+                    &:hover {
+                        color: $txt-hover;
+                    }
+                }
+
+                &.active {
+                    a {
+                        color: $txt-hover;
+                    }
+                }
+            }
+        }
+    }
+}
